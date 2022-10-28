@@ -1,0 +1,311 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap');
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* RESPONSIVE DESIGN PHONE */
+@media only screen and (min-width: 320px) {
+
+body {
+    width: 100%;
+    margin: 0;
+}
+
+/* HEADER */
+.ohmyfood-logo-container {
+    display: flex;
+    justify-content: center;
+    padding: 24px;
+    margin-top: 5px;
+}
+
+/* LOCATION */
+.location {
+    background-color: #eaeaea;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 15px;
+    font-weight: bold;
+    color: #353535;
+    box-shadow: 1px 7px 13px #e5e5e5;
+}
+
+/* BOOKING */
+.booking {
+    background-color: #f6f6f6;
+    padding: 12px;
+    padding-bottom: 45px;
+    text-align: center;
+
+    h1 {
+        margin-top: 25px;
+        font-size: 24px;
+        font-weight: bold; 
+    }
+
+    p {
+        margin-bottom: 26px;
+        font-size: 18px;
+    }
+
+    button {
+        border: {
+            radius: 33px;
+            color: #FF79DA;
+        }
+
+        padding: 16px;
+        font-size: 16px;
+        background-color: #FF79DA;
+        color: #FFFFFF;
+    }
+}
+
+/* FUNCTIONING */
+.functioning-box {
+    padding: 20px;
+
+    h2 {
+        font-weight: bold;
+    }
+
+    ul {
+        list-style-type: none;
+        padding-left: 0;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 16px;
+        font-size: 17px;
+        font-weight: bold;
+    }
+
+    li {
+        display: flex;
+        justify-content: flex-start;
+        gap: 27px;
+        align-items: baseline;
+        width: 100%;
+        padding: 7px;
+        border-radius: 22px;
+    }
+
+    .fas {
+        color: #737373;
+    }
+}
+
+.functioning-option-number {
+    border: 1px solid #9356DC {
+        radius: 100%;
+    }
+    padding: 3px;
+    width: 5%;
+    background-color: #9356DC;
+    color: #FFF;
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+    margin-left: -15px;
+    
+    :hover {
+        color: #9356DC;
+    }
+}
+
+.choose-restaurant {
+    background-color: #f6f6f6;
+    border-radius: 15px;
+    box-shadow: 1px 7px 13px #e5e5e5;
+
+    :hover {
+        background-color: #eedff9;
+    }
+}
+
+.compose-menu {
+    @extend .choose-restaurant;
+}
+
+.eat-restaurant {
+    @extend .choose-restaurant;
+}
+
+/* RESTAURANTS */
+.restaurants {
+    background-color: #f6f6f6;
+    padding: 20px;
+    padding-bottom: 70px;
+    
+    h2 {
+        font-weight: bold;
+    }
+
+    img {
+        width: 100%;
+        object-fit: cover;
+        border-radius: 23px 23px 0 0;
+        height: 222px;
+    }
+}
+
+.restaurants-box {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 20px;
+
+    figure {
+        background-color: #FFF;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        border-radius: 23px;
+    }
+
+    a {
+        display: flex;
+        justify-content: flex-end; 
+    }
+
+    h3 {
+        margin-bottom: 0;
+        margin-left: 15px;
+    }
+
+    p {
+        margin-top: 2px;
+        margin-left: 15px;
+    }
+
+    figcaption {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        height: 82px;
+    }
+}
+
+
+.new-button-restaurant {
+    position: absolute;
+    z-index: 2;
+    margin-top: 14px;
+    margin-right: 14px;
+    padding: 6px;
+    background-color: #99E2D0;
+    border-radius: 3px;
+    color: #148b6d;
+    font-weight: bold;
+    width: 22%;
+    text-align: center;
+
+    a:visited {
+        color: #148b6d;
+    }
+}
+
+.restaurants-title-container {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+
+    i {
+        margin-top: 20px;
+        margin-right: 22px;
+        font-size: 20px;
+        :hover {
+            color: #9356DC;
+            background-color: #9356DC;
+        }
+    }
+}
+
+/* FOOTER */
+.footer-box {
+    background-color: #353535;
+    color: #fff;
+    padding: 3px;
+
+    h4 {
+    font-family: 'Shrikhand', cursive;
+    margin-left: 39px;
+    }
+
+    a {
+        color:#fff;
+        text-decoration: none;
+    }
+}
+
+.footer-items {
+    list-style-type: none;
+    line-height: 25px;
+}
+
+.footer-first-item {
+    margin-left: 10px;
+    }
+
+.footer-second-item {
+    margin-left: 3px;
+}
+
+/* MENUS */ /* HEADER */
+header {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+
+    i {
+        margin-left: -60px;
+        font-size: 22px;
+    }
+
+    h1 {
+        font-family: "Shrikhand", cursive;
+        margin-top: 20px;
+    }
+
+    a:visited {
+        color: black;
+        }
+    }
+  
+  /* PRESENTATION */
+  .menu {
+    img {
+      width: 100%;
+    }
+
+    .title-and-icon {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+
+    .title-global-page {
+        font-family: "Shrikhand", cursive;
+        font-size: 30px;
+    }
+
+    i {
+        font-size: 27px;
+    }
+}
+
+.menu-global-container {
+    padding: 10px;
+}
+
+  }
+
+
+
+
+}
