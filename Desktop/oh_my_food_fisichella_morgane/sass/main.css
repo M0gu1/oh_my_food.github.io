@@ -79,10 +79,10 @@
   padding: 7px;
   border-radius: 22px;
 }
-.functioning-box .fas {
+.functioning-box .functioning-icons {
   color: #737373;
 }
-.functioning-box .fas :hover {
+.functioning-box .functioning-icons:hover {
   color: #9356DC;
 }
 
@@ -185,7 +185,7 @@ ul :hover {
   margin-right: 22px;
   font-size: 20px;
 }
-.restaurants-title-container .fa-heart :hover {
+.restaurants-title-container .fa-heart:hover {
   background: linear-gradient(354deg, rgb(147, 86, 220) 17%, rgb(255, 121, 218) 82%);
 }
 
@@ -222,6 +222,7 @@ header {
   display: flex;
   align-items: baseline;
   justify-content: center;
+  width: 100%;
 }
 header i {
   margin-left: -60px;
@@ -261,6 +262,9 @@ header a:visited {
   position: relative;
   padding-left: 20px;
   padding-right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .title-starters, .title-dishes, .title-desserts {
