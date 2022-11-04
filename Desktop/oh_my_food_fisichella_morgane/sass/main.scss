@@ -103,6 +103,7 @@ button {
         color: #737373;
         &:hover {
             color: $primary;
+            cursor: pointer;
         }
     }
 }
@@ -122,6 +123,7 @@ button {
 
 ul :hover {
     background-color: #f6eaff;
+    cursor: pointer;
 }
 
 .choose-restaurant {
@@ -230,6 +232,7 @@ ul :hover {
         font-size: 20px;
         &:hover {
             background: $linear;
+            cursor: pointer;
         }
     }
 }
@@ -318,8 +321,7 @@ header {
     margin-top: -34px;
     position: relative;
     padding-left: 16px;
-    padding-right: 0px;
-    width: 96%;
+    padding-right: 1px;
 }
 
 #order-button {
@@ -345,6 +347,7 @@ header {
     border-radius: 15px;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     margin-top: 15px;
     padding: 10px;
     height: 47px;
@@ -353,27 +356,27 @@ header {
     width: 90%;
         
     h3 {
-        width: 95%;
+        width: 90%;
         margin: 0;
         font-size: 17px;
     }
 
-    .detail-food {
-        width: 95%;
-        display: flex;
-        justify-content: space-between;
-            p {
-                margin: 0;
-                font-size: 14px;
-            }
+    p {
+        margin: 0;
+        font-size: 14px;
+        margin-top: 0;
     }
+}
 
-    span {
-        display: flex;
-        justify-content: flex-end;
-        width: 10%;
-        font-size: 15px;
-    }
+.detail-food {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+}    
+
+.detail-price {
+    margin-top: 23px;
+    font-size: 15px;
 }
 
 .validation-container {
@@ -387,6 +390,7 @@ header {
             display: flex;
             align-items: center;
             width: 10%;
+            cursor: pointer;
             }
     }
 }

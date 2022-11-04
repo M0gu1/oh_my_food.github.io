@@ -85,6 +85,7 @@
 }
 .functioning-box .functioning-icons:hover {
   color: #9356DC;
+  cursor: pointer;
 }
 
 .functioning-option-number {
@@ -102,6 +103,7 @@
 
 ul :hover {
   background-color: #f6eaff;
+  cursor: pointer;
 }
 
 .choose-restaurant, .eat-restaurant, .compose-menu {
@@ -194,6 +196,7 @@ ul :hover {
 }
 .restaurants-title-container .fa-heart:hover {
   background: linear-gradient(354deg, rgb(147, 86, 220) 17%, rgb(255, 121, 218) 82%);
+  cursor: pointer;
 }
 
 /* FOOTER */
@@ -269,8 +272,7 @@ header a:visited {
   margin-top: -34px;
   position: relative;
   padding-left: 16px;
-  padding-right: 0px;
-  width: 96%;
+  padding-right: 1px;
 }
 
 #order-button {
@@ -292,6 +294,7 @@ header a:visited {
   border-radius: 15px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   margin-top: 15px;
   padding: 10px;
   height: 47px;
@@ -300,23 +303,24 @@ header a:visited {
   width: 90%;
 }
 .food-starter h3, .food-dish h3, .food-dessert h3 {
-  width: 95%;
+  width: 90%;
   margin: 0;
   font-size: 17px;
 }
-.food-starter .detail-food, .food-dish .detail-food, .food-dessert .detail-food {
-  width: 95%;
-  display: flex;
-  justify-content: space-between;
-}
-.food-starter .detail-food p, .food-dish .detail-food p, .food-dessert .detail-food p {
+.food-starter p, .food-dish p, .food-dessert p {
   margin: 0;
   font-size: 14px;
+  margin-top: 0;
 }
-.food-starter span, .food-dish span, .food-dessert span {
+
+.detail-food {
+  width: 90%;
   display: flex;
-  justify-content: flex-end;
-  width: 10%;
+  flex-direction: column;
+}
+
+.detail-price {
+  margin-top: 23px;
   font-size: 15px;
 }
 
@@ -332,6 +336,7 @@ header a:visited {
   display: flex;
   align-items: center;
   width: 10%;
+  cursor: pointer;
 }
 
 .menu-global-container button {
