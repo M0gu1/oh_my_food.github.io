@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 * {
   font-family: "Roboto", sans-serif;
 }
@@ -24,9 +24,9 @@
     justify-content: center;
     align-items: baseline;
     gap: 15px;
-    font-weight: bold;
+    font-weight: 500;
     color: #353535;
-    box-shadow: 1px 7px 13px #e5e5e5;
+    box-shadow: inset 0px 6px 5px -4px #cacaca;
   }
   /* BOOKING */
   .booking {
@@ -43,6 +43,7 @@
   .booking p {
     margin-bottom: 26px;
     font-size: 18px;
+    font-weight: 300;
   }
   button {
     padding: 16px;
@@ -68,7 +69,7 @@
   flex-wrap: wrap;
   gap: 16px;
   font-size: 17px;
-  font-weight: bold;
+  font-weight: 500;
 }
 .functioning-box li {
   display: flex;
@@ -125,6 +126,11 @@ ul :hover {
   border-radius: 23px 23px 0 0;
   height: 222px;
 }
+.restaurants .linear-heart {
+  max-width: 20px;
+  max-height: 20px;
+  display: none;
+}
 
 .restaurants-box {
   display: flex;
@@ -150,6 +156,7 @@ ul :hover {
 .restaurants-box p {
   margin-top: 2px;
   margin-left: 15px;
+  font-weight: 300;
 }
 .restaurants-box figcaption {
   display: flex;
@@ -245,6 +252,7 @@ header a:visited {
   justify-content: space-between;
   align-items: baseline;
   margin-top: 25px;
+  width: 93%;
 }
 .menu .title-global-page {
   font-family: "Shrikhand", cursive;
@@ -260,11 +268,15 @@ header a:visited {
   border-radius: 30px 30px 0px 0px;
   margin-top: -34px;
   position: relative;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 16px;
+  padding-right: 0px;
+  width: 96%;
+}
+
+#order-button {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: center;
+  width: 90%;
 }
 
 .title-starters, .title-dishes, .title-desserts {
@@ -285,6 +297,7 @@ header a:visited {
   height: 47px;
   line-height: 24px;
   box-shadow: 1px 7px 13px #e5e5e5;
+  width: 90%;
 }
 .food-starter h3, .food-dish h3, .food-dessert h3 {
   width: 95%;
