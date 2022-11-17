@@ -9,6 +9,7 @@
   body {
     width: 100%;
     margin: 0;
+    position: relative;
   }
   /* HEADER */
   .ohmyfood-logo-container {
@@ -100,8 +101,12 @@
   font-size: 14px;
   margin-left: -15px;
 }
+.functioning-option-number :hover {
+  background-color: #9356DC;
+  cursor: pointer;
+}
 
-ul :hover {
+.functioning-options :hover {
   background-color: #f6eaff;
   cursor: pointer;
 }
@@ -343,4 +348,132 @@ header a:visited {
   margin-top: 47px;
   margin-bottom: 55px;
   width: 58%;
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  font-size: 48px;
+  font-family: "Shrikhand", cursive;
+  font-weight: bold;
+  color: #000;
+  position: absolute;
+  top: 17%;
+  left: 29%;
+  transform: translate(-22%, -44%);
+  transform: translate(-22%, -44%);
+}
+
+.loader::before {
+  content: "";
+  position: absolute;
+  left: 66%;
+  bottom: 28%;
+  width: 27px;
+  height: 26px;
+  border-radius: 50%;
+  border: 10px solid #FFF;
+  border-bottom-color: #9356DC;
+  box-sizing: border-box;
+  -webkit-animation: rotation 0.7s cubic-bezier(0.65, -0.56, 0.1, 1.33) infinite;
+          animation: rotation 0.7s cubic-bezier(0.65, -0.56, 0.1, 1.33) infinite;
+}
+
+@-webkit-keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.fade-in {
+  -webkit-animation-name: fadein-opacity;
+  animation-name: fadein-opacity;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+}
+
+@-webkit-keyframes fadein-opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadein-opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.disparition {
+  -webkit-animation-name: dispariton-opacity;
+  animation-name: disparition-opacity;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+}
+
+@-webkit-keyframes disparition-opacity {
+  0% {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+}
+@keyframes disparition-opacity {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.title-starters, .title-dishes, .title-desserts,
+.food-starter,
+.food-dish,
+.food-dessert {
+  -webkit-animation-name: progressive;
+  animation-name: progressive;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+}
+
+.title-dishes,
+.food-dish {
+  -webkit-animation-name: progressive;
+  animation-name: progressive;
+  -webkit-animation-duration: 4s;
+  animation-duration: 4s;
+}
+
+.title-desserts,
+.food-dessert {
+  -webkit-animation-name: progressive;
+  animation-name: progressive;
+  -webkit-animation-duration: 6s;
+  animation-duration: 6s;
 }/*# sourceMappingURL=main.css.map */
