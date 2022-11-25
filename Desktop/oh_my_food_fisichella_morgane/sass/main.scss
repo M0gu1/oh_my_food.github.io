@@ -14,7 +14,6 @@ $f-icon: #737373;
 
 /* SMARTPHONE RESPONSIVE DESIGN */
 @media only screen and (min-width: 375px) {
-
 body {
     width: 100%;
     margin: 0;
@@ -69,7 +68,6 @@ button {
     border: none;
     background: $linear;
 }
-    }
 
 /* FUNCTIONING */
 .functioning-box {
@@ -358,8 +356,11 @@ header {
     height: 47px;
     line-height: 24px;
     box-shadow: $shadow;
-    width: 90%;
-        
+    width: 90%; 
+    -webkit-animation-name: progressive;
+            animation-name: progressive;
+    -webkit-animation-delay: 2s;
+            animation-delay: 2s; 
     h3 {
         width: 90%;
         margin: 0;
@@ -370,6 +371,43 @@ header {
         margin: 0;
         font-size: 14px;
         margin-top: 0;
+    }
+}
+.food-dish {
+    -webkit-animation-name: progressive;
+        animation-name: progressive;
+    -webkit-animation-delay: 4s;
+        animation-delay: 4s; 
+}
+
+.food-dessert {
+    -webkit-animation-name: progressive;
+        animation-name: progressive;
+    -webkit-animation-delay: 6s;
+        animation-delay: 6s; 
+}
+
+@-webkit-keyframes progressive {
+    0% {
+        opacity: 0; 
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+  }
+  
+  @keyframes progressive {
+    0% {
+        opacity: 0; 
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
     }
 }
 
@@ -441,6 +479,7 @@ $loader-color: #FDD835;
   0% {
     width: 10%;
     transform: rotate(0deg);
+    opacity: 1;
   }
   10% {
     left: 0%;
@@ -470,6 +509,7 @@ $loader-color: #FDD835;
     width: 2%;
     left: 25%;
     transform: rotate(360deg);
+    opacity: 0;
   }
 }
 
@@ -477,29 +517,47 @@ $loader-color: #FDD835;
   0% {
     transform: rotate(0deg);
     transform-origin: top right;
+    opacity: 1;
   }
   10% {
     transform: rotate(-2deg);
     transform-origin: top right;
   }
+  25% {
+    opacity: 0.9;
+  }
   50% {
-    transform: rotate(15deg);
+    transform: rotate(10deg);
+  }
+  75% {
+    opacity: 0.7;
+  }
+  95% {
+    transform: rotate(0deg);
   }
   100% {
-    transform: rotate(0deg);
+    opacity: 0;
   }
 }
 
 @keyframes shadow {
   0% {
-    width: 30%;
+    width: 20%;
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.9;
   }
   50% {
     width: 40%;
     left: 20px;
   }
-  100% {
+  75% {
     width: 30%;
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
   }
 }
 
@@ -521,13 +579,13 @@ $loader-color: #FDD835;
     border: 10px solid transparent;
     border-bottom: 10px solid $loader-color;
     border-radius: 50%;
-    animation: loader $timing infinite;
+    animation: loader $timing forwards;
     animation-timing-function: linear;
   }
   .pan-container {
-    display:flex;
+    display: flex;
     width: 100%;
-    animation: pan $timing infinite;
+    animation: pan $timing forwards;
   }
   .pan {
     width: 60%;
@@ -553,13 +611,11 @@ $loader-color: #FDD835;
     width: 30%;
     height: 8px;
     background: $color-shadow;
-    // box-shadow: 5px 0 8px 4px $color-shadow;
     border-radius: 20px;
-    animation: shadow $timing infinite;
+    animation: shadow $timing forwards;
   }
 }
   
-
 .fade-in {
 	-webkit-animation-name: fadein-opacity;
 	        animation-name: fadein-opacity;
@@ -567,8 +623,8 @@ $loader-color: #FDD835;
 	        animation-iteration-count: 1;
 	-webkit-animation-timing-function: ease-in;
 	        animation-timing-function: ease-in;
-	-webkit-animation-duration: 5s;
-	        animation-duration: 5s;
+	-webkit-animation-duration: 3s;
+	        animation-duration: 3s;
 }
 
 @-webkit-keyframes fadein-opacity {
@@ -598,59 +654,6 @@ $loader-color: #FDD835;
 		opacity: 1;
 	}
 }
-
-@-webkit-keyframes disparition-opacity {
-    0% {
-        opacity: O;
-    }
-    50% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
-}
-
-@-moz-keyframes disparition-opacity {
-    0% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-    }
-}
-
-@keyframes disparition-opacity {
-    0% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
-}
-
-.title-starters,
-.food-starter {
-  -webkit-animation-name: progressive;
-          animation-name: progressive;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-}
-
-.title-dishes,
-.food-dish {
-  -webkit-animation-name: progressive;
-          animation-name: progressive;
-  -webkit-animation-duration: 4s;
-          animation-duration: 4s;
-}
-
-.title-desserts,
-.food-dessert {
-  -webkit-animation-name: progressive;
-          animation-name: progressive;
-  -webkit-animation-duration: 6s;
-          animation-duration: 6s;
 }
 
 /* OTHER RESPONSIVE DESIGN */
@@ -681,7 +684,6 @@ $loader-color: #FDD835;
         p {
             font-size: 20px;
         }
-
     }
 
     /* BOOKING */
@@ -737,9 +739,14 @@ $loader-color: #FDD835;
     /* RESTAURANTS */
     .new-button-restaurant {
         font-size: 21px;
+        width: 12%;
     }
 
     .restaurants-box {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        flex-wrap: wrap;
         h3 {
             font-size: 25px;
         }
@@ -748,6 +755,11 @@ $loader-color: #FDD835;
         }
         figcaption {
             height: 111px;
+        }
+        figure {
+            display: flex;
+            flex-direction: column;
+            width: 48%;
         }
     }
 
@@ -791,7 +803,6 @@ $loader-color: #FDD835;
         p {
             font-size: 18px;
         }
-
     }
 
     /* BOOKING */
@@ -836,16 +847,10 @@ $loader-color: #FDD835;
         height: 20px;
         font-size: 14px;
     }
-}
 
     /* RESTAURANTS */
-    .new-button-restaurant {
-        font-size: 17px;
-        width: 8%;
-    }
-
     .restaurants-box {
-        flex-direction: row;
+        flex-direction: column;
         h3 {
             font-size: 18px;
         }
@@ -876,6 +881,7 @@ $loader-color: #FDD835;
         font-size: 16px;
         line-height: 30px;
     }
+}
 
 /* PC RESPONSIVE DESIGN MIN 1200px */
 @media only screen and (min-width: 1200px) {

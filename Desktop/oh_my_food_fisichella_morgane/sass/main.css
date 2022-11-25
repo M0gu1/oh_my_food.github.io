@@ -355,6 +355,7 @@ header a:visited {
   0% {
     width: 10%;
     transform: rotate(0deg);
+    opacity: 1;
   }
   10% {
     left: 0%;
@@ -384,12 +385,14 @@ header a:visited {
     width: 2%;
     left: 25%;
     transform: rotate(360deg);
+    opacity: 0;
   }
 }
 @keyframes loader {
   0% {
     width: 10%;
     transform: rotate(0deg);
+    opacity: 1;
   }
   10% {
     left: 0%;
@@ -419,62 +422,99 @@ header a:visited {
     width: 2%;
     left: 25%;
     transform: rotate(360deg);
+    opacity: 0;
   }
 }
 @-webkit-keyframes pan {
   0% {
     transform: rotate(0deg);
     transform-origin: top right;
+    opacity: 1;
   }
   10% {
     transform: rotate(-2deg);
     transform-origin: top right;
   }
+  25% {
+    opacity: 0.9;
+  }
   50% {
-    transform: rotate(15deg);
+    transform: rotate(10deg);
+  }
+  75% {
+    opacity: 0.7;
+  }
+  95% {
+    transform: rotate(0deg);
   }
   100% {
-    transform: rotate(0deg);
+    opacity: 0;
   }
 }
 @keyframes pan {
   0% {
     transform: rotate(0deg);
     transform-origin: top right;
+    opacity: 1;
   }
   10% {
     transform: rotate(-2deg);
     transform-origin: top right;
   }
+  25% {
+    opacity: 0.9;
+  }
   50% {
-    transform: rotate(15deg);
+    transform: rotate(10deg);
+  }
+  75% {
+    opacity: 0.7;
+  }
+  95% {
+    transform: rotate(0deg);
   }
   100% {
-    transform: rotate(0deg);
+    opacity: 0;
   }
 }
 @-webkit-keyframes shadow {
   0% {
-    width: 30%;
+    width: 20%;
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.9;
   }
   50% {
     width: 40%;
     left: 20px;
   }
-  100% {
+  75% {
     width: 30%;
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
   }
 }
 @keyframes shadow {
   0% {
-    width: 30%;
+    width: 20%;
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.9;
   }
   50% {
     width: 40%;
     left: 20px;
   }
-  100% {
+  75% {
     width: 30%;
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
   }
 }
 .pan-loader {
@@ -495,16 +535,16 @@ header a:visited {
   border: 10px solid transparent;
   border-bottom: 10px solid #FDD835;
   border-radius: 50%;
-  -webkit-animation: loader 2s infinite;
-          animation: loader 2s infinite;
+  -webkit-animation: loader 2s forwards;
+          animation: loader 2s forwards;
   -webkit-animation-timing-function: linear;
           animation-timing-function: linear;
 }
 .pan-loader .pan-container {
   display: flex;
   width: 100%;
-  -webkit-animation: pan 2s infinite;
-          animation: pan 2s infinite;
+  -webkit-animation: pan 2s forwards;
+          animation: pan 2s forwards;
 }
 .pan-loader .pan {
   width: 60%;
@@ -530,8 +570,8 @@ header a:visited {
   height: 8px;
   background: #737373;
   border-radius: 20px;
-  -webkit-animation: shadow 2s infinite;
-          animation: shadow 2s infinite;
+  -webkit-animation: shadow 2s forwards;
+          animation: shadow 2s forwards;
 }
 
 .fade-in {
@@ -541,8 +581,8 @@ header a:visited {
   animation-iteration-count: 1;
   -webkit-animation-timing-function: ease-in;
   animation-timing-function: ease-in;
-  -webkit-animation-duration: 5s;
-  animation-duration: 5s;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
 }
 
 @-webkit-keyframes fadein-opacity {
@@ -579,31 +619,6 @@ header a:visited {
   100% {
     opacity: 0;
   }
-}
-.title-starters, .title-dishes, .title-desserts,
-.food-starter,
-.food-dish,
-.food-dessert {
-  -webkit-animation-name: progressive;
-  animation-name: progressive;
-  -webkit-animation-duration: 2s;
-  animation-duration: 2s;
-}
-
-.title-dishes,
-.food-dish {
-  -webkit-animation-name: progressive;
-  animation-name: progressive;
-  -webkit-animation-duration: 4s;
-  animation-duration: 4s;
-}
-
-.title-desserts,
-.food-dessert {
-  -webkit-animation-name: progressive;
-  animation-name: progressive;
-  -webkit-animation-duration: 6s;
-  animation-duration: 6s;
 }
 
 /* OTHER RESPONSIVE DESIGN */
@@ -672,6 +687,13 @@ header a:visited {
   /* RESTAURANTS */
   .new-button-restaurant {
     font-size: 21px;
+    width: 12%;
+  }
+  .restaurants-box {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    flex-wrap: wrap;
   }
   .restaurants-box h3 {
     font-size: 25px;
@@ -681,6 +703,10 @@ header a:visited {
   }
   .restaurants-box figcaption {
     height: 111px;
+  }
+  .restaurants-box figure {
+    display: flex;
+    flex-direction: column;
   }
   .restaurants-title-container .fa-heart {
     font-size: 35px;
@@ -750,13 +776,8 @@ header a:visited {
   }
 }
 /* RESTAURANTS */
-.new-button-restaurant {
-  font-size: 17px;
-  width: 8%;
-}
-
 .restaurants-box {
-  flex-direction: row;
+  flex-direction: column;
 }
 .restaurants-box h3 {
   font-size: 18px;
