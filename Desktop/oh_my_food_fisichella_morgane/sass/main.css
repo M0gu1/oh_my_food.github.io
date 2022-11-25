@@ -4,8 +4,8 @@
   font-family: "Roboto", sans-serif;
 }
 
-/* RESPONSIVE DESIGN PHONE */
-@media only screen and (min-width: 320px) {
+/* SMARTPHONE RESPONSIVE DESIGN */
+@media only screen and (min-width: 375px) {
   body {
     width: 100%;
     margin: 0;
@@ -350,52 +350,190 @@ header a:visited {
   width: 58%;
 }
 
-.loader {
-  display: flex;
-  justify-content: center;
-  font-size: 48px;
-  font-family: "Shrikhand", cursive;
-  font-weight: bold;
-  color: #000;
-  position: absolute;
-  top: 17%;
-  left: 29%;
-  transform: translate(-22%, -44%);
-  transform: translate(-22%, -44%);
+/* LOADING SPINNER */
+@-webkit-keyframes loader {
+  0% {
+    width: 10%;
+    transform: rotate(0deg);
+  }
+  10% {
+    left: 0%;
+    transform: rotate(0deg);
+  }
+  20% {
+    width: 0%;
+    left: 20%;
+  }
+  30% {
+    width: 25%;
+  }
+  50% {
+    left: 15%;
+    width: 35%;
+  }
+  70% {
+    width: 30%;
+    left: 18%;
+    transform: rotate(240deg);
+  }
+  90% {
+    width: 30%;
+    left: 10%;
+  }
+  100% {
+    width: 2%;
+    left: 25%;
+    transform: rotate(360deg);
+  }
 }
-
-.loader::before {
-  content: "";
+@keyframes loader {
+  0% {
+    width: 10%;
+    transform: rotate(0deg);
+  }
+  10% {
+    left: 0%;
+    transform: rotate(0deg);
+  }
+  20% {
+    width: 0%;
+    left: 20%;
+  }
+  30% {
+    width: 25%;
+  }
+  50% {
+    left: 15%;
+    width: 35%;
+  }
+  70% {
+    width: 30%;
+    left: 18%;
+    transform: rotate(240deg);
+  }
+  90% {
+    width: 30%;
+    left: 10%;
+  }
+  100% {
+    width: 2%;
+    left: 25%;
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes pan {
+  0% {
+    transform: rotate(0deg);
+    transform-origin: top right;
+  }
+  10% {
+    transform: rotate(-2deg);
+    transform-origin: top right;
+  }
+  50% {
+    transform: rotate(15deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes pan {
+  0% {
+    transform: rotate(0deg);
+    transform-origin: top right;
+  }
+  10% {
+    transform: rotate(-2deg);
+    transform-origin: top right;
+  }
+  50% {
+    transform: rotate(15deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@-webkit-keyframes shadow {
+  0% {
+    width: 30%;
+  }
+  50% {
+    width: 40%;
+    left: 20px;
+  }
+  100% {
+    width: 30%;
+  }
+}
+@keyframes shadow {
+  0% {
+    width: 30%;
+  }
+  50% {
+    width: 40%;
+    left: 20px;
+  }
+  100% {
+    width: 30%;
+  }
+}
+.pan-loader {
+  width: 180px;
+  height: 180px;
+  margin: 100px auto;
   position: absolute;
-  left: 66%;
-  bottom: 28%;
-  width: 27px;
-  height: 26px;
+  left: 32%;
+  top: 9%;
+}
+.pan-loader .loader {
+  position: relative;
+  top: 10%;
+  left: 0;
+  z-index: -1;
+  width: 60%;
+  height: 45%;
+  border: 10px solid transparent;
+  border-bottom: 10px solid #FDD835;
   border-radius: 50%;
-  border: 10px solid #FFF;
-  border-bottom-color: #9356DC;
-  box-sizing: border-box;
-  -webkit-animation: rotation 0.7s cubic-bezier(0.65, -0.56, 0.1, 1.33) infinite;
-          animation: rotation 0.7s cubic-bezier(0.65, -0.56, 0.1, 1.33) infinite;
+  -webkit-animation: loader 2s infinite;
+          animation: loader 2s infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+.pan-loader .pan-container {
+  display: flex;
+  width: 100%;
+  -webkit-animation: pan 2s infinite;
+          animation: pan 2s infinite;
+}
+.pan-loader .pan {
+  width: 60%;
+  height: 20px;
+  background: linear-gradient(#9356DC, #FF79DA);
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.pan-loader .handle {
+  width: 40%;
+  height: 10px;
+  background: linear-gradient(#9356DC, #FF79DA);
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.pan-loader .shadow {
+  position: relative;
+  top: 15%;
+  left: 15%;
+  width: 30%;
+  height: 8px;
+  background: #737373;
+  border-radius: 20px;
+  -webkit-animation: shadow 2s infinite;
+          animation: shadow 2s infinite;
 }
 
-@-webkit-keyframes rotation {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes rotation {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
 .fade-in {
   -webkit-animation-name: fadein-opacity;
   animation-name: fadein-opacity;
@@ -403,8 +541,8 @@ header a:visited {
   animation-iteration-count: 1;
   -webkit-animation-timing-function: ease-in;
   animation-timing-function: ease-in;
-  -webkit-animation-duration: 2s;
-  animation-duration: 2s;
+  -webkit-animation-duration: 5s;
+  animation-duration: 5s;
 }
 
 @-webkit-keyframes fadein-opacity {
@@ -423,24 +561,14 @@ header a:visited {
     opacity: 1;
   }
 }
-.disparition {
-  -webkit-animation-name: dispariton-opacity;
-  animation-name: disparition-opacity;
-  -webkit-animation-iteration-count: 1;
-  animation-iteration-count: 1;
-  -webkit-animation-timing-function: ease-in;
-  animation-timing-function: ease-in;
-  -webkit-animation-duration: 2s;
-  animation-duration: 2s;
-}
-
 @-webkit-keyframes disparition-opacity {
   0% {
-    transform: scaleX(1);
+    opacity: O;
+  }
+  50% {
     opacity: 1;
   }
   100% {
-    transform: scaleX(0);
     opacity: 0;
   }
 }
@@ -476,4 +604,186 @@ header a:visited {
   animation-name: progressive;
   -webkit-animation-duration: 6s;
   animation-duration: 6s;
-}/*# sourceMappingURL=main.css.map */
+}
+
+/* OTHER RESPONSIVE DESIGN */
+@media only screen and (min-width: 480px) {
+  #order-button {
+    width: 97%;
+  }
+}
+/* TABLET RESPONSIVE DESIGN */
+@media only screen and (min-width: 768px) {
+  h1 {
+    font-size: 28px;
+  }
+  h2 {
+    font-size: 30px;
+    text-align: center;
+  }
+  /* LOADING SPINNER */
+  .pan-loader {
+    left: 43%;
+  }
+  /* LOCATION */
+  .location p {
+    font-size: 20px;
+  }
+  /* BOOKING */
+  .booking h1 {
+    font-size: 30px;
+  }
+  .booking p {
+    font-size: 24px;
+  }
+  .booking button {
+    padding: 22px;
+    font-size: 22px;
+  }
+  /* FUNCTIONNING */
+  .functioning-box h2 {
+    margin-bottom: 30px;
+  }
+  .functioning-box ul {
+    flex-wrap: nowrap;
+  }
+  .functioning-box li {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 14px;
+    align-items: center;
+  }
+  .functioning-box li p {
+    margin-top: 3px;
+    font-size: 19.5px;
+  }
+  .functioning-option-number {
+    margin-left: 0px;
+    width: 30px;
+    height: 30px;
+    align-items: center;
+    font-size: 18px;
+    margin-top: -22px;
+  }
+  .functioning-icons {
+    font-size: 40px;
+  }
+  /* RESTAURANTS */
+  .new-button-restaurant {
+    font-size: 21px;
+  }
+  .restaurants-box h3 {
+    font-size: 25px;
+  }
+  .restaurants-box p {
+    font-size: 22px;
+  }
+  .restaurants-box figcaption {
+    height: 111px;
+  }
+  .restaurants-title-container .fa-heart {
+    font-size: 35px;
+    margin-right: 35px;
+  }
+  /* FOOTER */
+  .footer-box h4, .footer-global h4 {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 3px;
+  }
+  .footer-items, .footer-index {
+    text-align: center;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+/* PC RESPONSIVE DESIGN MIN 992px */
+@media only screen and (min-width: 992px) {
+  h2 {
+    font-size: 25px;
+    text-align: left;
+  }
+  /* LOADING SPINNER */
+  .pan-loader {
+    left: 43%;
+    top: 13%;
+  }
+  /* LOCATION */
+  .location p {
+    font-size: 18px;
+  }
+  /* BOOKING */
+  .booking h1 {
+    font-size: 25px;
+  }
+  .booking p {
+    font-size: 20px;
+  }
+  .booking button {
+    padding: 19px;
+    font-size: 17px;
+  }
+  /* FUNCTIONING */
+  .functioning-box li {
+    flex-direction: row;
+    width: 27%;
+    gap: 18px;
+    height: 40px;
+  }
+  .functioning-box li p {
+    margin-bottom: 0;
+    font-size: 16px;
+  }
+  .functioning-box ul {
+    gap: 40px;
+  }
+  .functioning-icons {
+    font-size: 16px;
+  }
+  .functioning-option-number {
+    margin-top: 0px;
+    margin-left: -43px;
+    width: 20px;
+    height: 20px;
+    font-size: 14px;
+  }
+}
+/* RESTAURANTS */
+.new-button-restaurant {
+  font-size: 17px;
+  width: 8%;
+}
+
+.restaurants-box {
+  flex-direction: row;
+}
+.restaurants-box h3 {
+  font-size: 18px;
+}
+.restaurants-box p {
+  font-size: 16px;
+}
+.restaurants-box figcaption {
+  height: 80px;
+}
+
+.restaurants-title-container .fa-heart {
+  font-size: 18px;
+  margin-right: 18px;
+}
+
+/* FOOTER */
+.footer-box h4, .footer-global h4 {
+  font-size: 24px;
+  text-align: start;
+  margin-bottom: 0px;
+}
+
+.footer-items, .footer-index {
+  text-align: start;
+  font-size: 16px;
+  line-height: 30px;
+}
+
+/* PC RESPONSIVE DESIGN MIN 1200px *//*# sourceMappingURL=main.css.map */
