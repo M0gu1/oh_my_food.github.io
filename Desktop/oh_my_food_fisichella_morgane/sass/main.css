@@ -324,7 +324,6 @@
 }
 
 .food-starter h3, .food-dish h3, .food-dessert h3 {
-  width: 90%;
   margin: 0;
   font-size: 16.5px;
 }
@@ -346,6 +345,7 @@
   line-height: 24px;
   box-shadow: 1px 7px 13px #e5e5e5;
   width: 90%;
+  position: relative;
   -webkit-animation-name: apparition;
   animation-name: apparition;
   -webkit-animation-duration: 2s;
@@ -394,7 +394,7 @@
   }
 }
 .detail-food {
-  width: 90%;
+  width: 82%;
   display: flex;
   flex-direction: column;
 }
@@ -402,18 +402,25 @@
 .detail-price {
   margin-top: 23px;
   font-size: 15px;
+  width: 28px;
 }
 
 .validation-container {
-  display: none;
+  margin-top: -58px;
+  position: relative;
+  margin-left: 281px;
 }
 .validation-container i {
+  background-color: #99E2D0;
   color: #fff;
+  padding: 17.5px;
+  margin-left: 282px;
+  border-radius: 0 14px 14px 0;
+  height: 32px;
 }
 .validation-container i :hover {
   display: flex;
   background-color: #99E2D0;
-  display: flex;
   align-items: center;
   width: 10%;
   cursor: pointer;
@@ -880,7 +887,7 @@
   }
   .functioning-option-number {
     margin-top: 0px;
-    margin-left: -43px;
+    margin-left: -4px;
     width: 20px;
     height: 20px;
     font-size: 14px;
@@ -952,6 +959,9 @@
     padding: 15px;
     font-size: 16px;
   }
+  .functioning-option-number {
+    margin-left: -98px;
+  }
   /* RESTAURANTS */
   .restaurants-box figure {
     width: 23%;
@@ -959,5 +969,11 @@
   .new-button-restaurant {
     font-size: 18px;
     width: 8%;
+  }
+  .restaurants-title-container .heart {
+    margin-left: 231px;
+  }
+  .restaurants-title-container .linear-heart {
+    margin-left: 231px;
   }
 }/*# sourceMappingURL=main.css.map */

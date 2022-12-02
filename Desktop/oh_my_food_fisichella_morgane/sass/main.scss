@@ -384,7 +384,6 @@ header {
 
 .food-starter {
     h3 {
-        width: 90%;
         margin: 0;
         font-size: 16.5px;
     }
@@ -407,6 +406,7 @@ header {
     line-height: 24px;
     box-shadow: $shadow;
     width: 90%;
+    position: relative;
     -webkit-animation-name: apparition;
         animation-name: apparition;
     -webkit-animation-duration: 2s;
@@ -461,7 +461,7 @@ header {
 }
 
 .detail-food {
-    width: 90%;
+    width: 82%;
     display: flex;
     flex-direction: column;
 }    
@@ -469,17 +469,23 @@ header {
 .detail-price {
     margin-top: 23px;
     font-size: 15px;
+    width: 28px;
 }
 
 .validation-container {
-    display: none;
-
+    margin-top: -58px;
+    position: relative;
+    margin-left: 281px;
     i {
+        background-color: $tertiary;
         color: #fff;
+        padding: 17.5px;
+        margin-left: 282px;
+        border-radius: 0 14px 14px 0;
+        height: 32px;
             :hover {
             display: flex;
             background-color: $tertiary;
-            display: flex;
             align-items: center;
             width: 10%;
             cursor: pointer;
@@ -946,7 +952,7 @@ $loader-color: #FDD835;
 
     .functioning-option-number {
         margin-top: 0px;
-        margin-left: -43px;
+        margin-left: -4px;
         width: 20px;
         height: 20px;
         font-size: 14px;
@@ -1008,7 +1014,6 @@ $loader-color: #FDD835;
 
 /* PC RESPONSIVE DESIGN MIN 1200px */
 @media only screen and (min-width: 1200px) {
-    
     h2 {
         font-size: 24px;
         text-align: center;
@@ -1035,6 +1040,10 @@ $loader-color: #FDD835;
         }
     }
 
+    .functioning-option-number {
+        margin-left: -98px;
+    }
+
     /* RESTAURANTS */
     .restaurants-box {
         figure {
@@ -1045,5 +1054,14 @@ $loader-color: #FDD835;
     .new-button-restaurant {
         font-size: 18px;
         width: 8%;
+    }
+
+    .restaurants-title-container {
+        .heart {
+            margin-left: 231px;
+        }
+        .linear-heart {
+            margin-left: 231px;
+        }
     }
 }
