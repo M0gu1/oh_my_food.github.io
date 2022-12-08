@@ -239,6 +239,7 @@ button {
     display: flex;
     justify-content: space-between;
     height: 100%;
+    width: 99.5%;
     .heart {
         max-width: 19px;
         max-height: 19px;
@@ -476,6 +477,7 @@ header {
     margin-top: -58px;
     position: relative;
     margin-left: 281px;
+    transition: transform 0.4s ease-in-out, width 0.4s ease-in-out, opacity 0.4s ease-in-out;
     i {
         background-color: $tertiary;
         color: #fff;
@@ -483,11 +485,14 @@ header {
         margin-left: 282px;
         border-radius: 0 14px 14px 0;
         height: 32px;
+        transform: rotate(360deg);
+        transition: 0.4s ease-in-out;
             :hover {
             display: flex;
             background-color: $tertiary;
             align-items: center;
             width: 10%;
+            transform: rotate(0deg);
             cursor: pointer;
             }
     }
@@ -905,7 +910,7 @@ $loader-color: #FDD835;
     /* LOADING SPINNER */
     .pan-loader {
         left: 43%;
-        top: 13%;
+        top: 17%;
     }
 
     /* LOCATION */
@@ -977,9 +982,15 @@ $loader-color: #FDD835;
         width: 10%;
     }
 
-    .restaurants-title-container .heart {
-        font-size: 18px;
-        margin-right: 18px;
+    .restaurants-title-container {
+        .heart {
+            font-size: 18px;
+            margin-right: 18px;
+            margin-left: 401px;
+        }
+        .linear-heart {
+            margin-left: 401px;
+        }
     }
 
     /* FOOTER */ 

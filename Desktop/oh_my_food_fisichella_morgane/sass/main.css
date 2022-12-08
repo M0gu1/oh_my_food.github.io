@@ -198,6 +198,7 @@
     display: flex;
     justify-content: space-between;
     height: 100%;
+    width: 99.5%;
   }
   .restaurants-title-container .heart {
     max-width: 19px;
@@ -851,7 +852,7 @@
   /* LOADING SPINNER */
   .pan-loader {
     left: 43%;
-    top: 13%;
+    top: 17%;
   }
   /* LOCATION */
   .location p {
@@ -912,6 +913,10 @@
   .restaurants-title-container .heart {
     font-size: 18px;
     margin-right: 18px;
+    margin-left: 401px;
+  }
+  .restaurants-title-container .linear-heart {
+    margin-left: 401px;
   }
   /* FOOTER */
   .footer-box {
