@@ -477,6 +477,8 @@ header {
     margin-top: -58px;
     position: relative;
     margin-left: 281px;
+    opacity: 1;
+    border: 2px red;
     transition: transform 0.4s ease-in-out, width 0.4s ease-in-out, opacity 0.4s ease-in-out;
     i {
         background-color: $tertiary;
