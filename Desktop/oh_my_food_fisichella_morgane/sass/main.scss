@@ -38,6 +38,10 @@ body {
     font-weight: 500;
     color: #353535;
     box-shadow: inset 0px 6px 5px -4px #cacaca;
+    i {
+        color: #353535;
+        font-size: 17px;
+    }
 }
 
 /* BOOKING */
@@ -465,40 +469,65 @@ header {
     width: 82%;
     display: flex;
     flex-direction: column;
+    height: 44px;
+    p {
+        height: 20px;
+        width: 100%;
+    }
 }    
 
 .detail-price {
     margin-top: 23px;
     font-size: 15px;
-    width: 28px;
+    width: 10%;
 }
 
 .validation-container {
-    margin-top: -58px;
-    position: relative;
-    margin-left: 281px;
-    opacity: 1;
-    border: 2px red;
-    transition: transform 0.4s ease-in-out, width 0.4s ease-in-out, opacity 0.4s ease-in-out;
+    margin-top: -57px;
+    padding: 17.5px;
+    background-color: $tertiary;
+    border-radius: 0 14px 14px 0;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    margin-left: 275px;
+    opacity: 0;
+    overflow: hidden;
+
+    }    
     i {
-        background-color: $tertiary;
         color: #fff;
-        padding: 17.5px;
-        margin-left: 282px;
-        border-radius: 0 14px 14px 0;
-        height: 32px;
         transform: rotate(360deg);
         transition: 0.4s ease-in-out;
-            :hover {
-            display: flex;
-            background-color: $tertiary;
-            align-items: center;
-            width: 10%;
-            transform: rotate(0deg);
-            cursor: pointer;
-            }
+        font-size: 22px;
     }
-}
+
+    .food-starter {
+        :hover {
+        cursor: pointer;
+            .validation-container {
+                overflow: visible;
+                opacity: 1;
+                width: 10%;
+            }
+            i {
+                display: flex;
+                justify-content: flex-end;
+                opacity: 1;
+                transform: rotate(0deg);
+            }
+            .detail-food {
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                width: 60%;
+            }
+            .detail-price {
+                margin-right: 20px;
+                width: 20%;
+            }
+        }
+    }    
 
 .food-dish, .food-dessert {
     @extend .food-starter;

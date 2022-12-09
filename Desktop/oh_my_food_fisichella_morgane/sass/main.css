@@ -29,6 +29,10 @@
     color: #353535;
     box-shadow: inset 0px 6px 5px -4px #cacaca;
   }
+  .location i {
+    color: #353535;
+    font-size: 17px;
+  }
   /* BOOKING */
   .booking {
     background-color: #f6f6f6;
@@ -398,34 +402,62 @@
   width: 82%;
   display: flex;
   flex-direction: column;
+  height: 44px;
+}
+.detail-food p {
+  height: 20px;
+  width: 100%;
 }
 
 .detail-price {
   margin-top: 23px;
   font-size: 15px;
-  width: 28px;
+  width: 10%;
 }
 
 .validation-container {
-  margin-top: -58px;
-  position: relative;
-  margin-left: 281px;
-}
-
-.validation-container i {
-  background-color: #99E2D0;
-  color: #fff;
+  margin-top: -57px;
   padding: 17.5px;
-  margin-left: 282px;
+  background-color: #99E2D0;
   border-radius: 0 14px 14px 0;
   height: 32px;
-}
-.validation-container i :hover {
   display: flex;
-  background-color: #99E2D0;
   align-items: center;
-  width: 10%;
+  margin-left: 275px;
+  opacity: 0;
+  overflow: hidden;
+}
+
+i {
+  color: #fff;
+  transform: rotate(360deg);
+  transition: 0.4s ease-in-out;
+  font-size: 22px;
+}
+
+.food-starter :hover, .food-dish :hover, .food-dessert :hover {
   cursor: pointer;
+}
+.food-starter :hover .validation-container, .food-dish :hover .validation-container, .food-dessert :hover .validation-container {
+  overflow: visible;
+  opacity: 1;
+  width: 10%;
+}
+.food-starter :hover i, .food-dish :hover i, .food-dessert :hover i {
+  display: flex;
+  justify-content: flex-end;
+  opacity: 1;
+  transform: rotate(0deg);
+}
+.food-starter :hover .detail-food, .food-dish :hover .detail-food, .food-dessert :hover .detail-food {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 60%;
+}
+.food-starter :hover .detail-price, .food-dish :hover .detail-price, .food-dessert :hover .detail-price {
+  margin-right: 20px;
+  width: 20%;
 }
 
 .food-dish1 {
