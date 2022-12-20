@@ -177,6 +177,12 @@ body {
             opacity: 1;
             max-width: 18px;
             max-height: 18px;
+            -webkit-animation-name: progressive-heart;
+                animation-name: progressive-heart;
+            -webkit-animation-timing-function: ease-out;
+                animation-timing-function: ease-out;
+            -webkit-animation-duration: 0.3s;
+                animation-duration: 0.3s;
         }
     }
 }
@@ -252,7 +258,43 @@ body {
             cursor: pointer;
         }
     }
-}   
+} 
+
+@-webkit-keyframes progressive-heart {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 0.3;
+    }
+    50%   {
+        opacity: 0.5;
+    }
+    75% {
+        opacity: 0.7
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+@keyframes progressive-heart {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 0.3;
+    }
+    50%   {
+        opacity: 0.5;
+    }
+    75% {
+        opacity: 0.7
+    }
+    100% {
+        opacity: 1
+    }
+}
 
 /* FOOTER */
 .footer-box {
@@ -349,6 +391,12 @@ header {
             opacity: 1;
             max-width: 27px;
             max-height: 27px;
+            -webkit-animation-name: progressive-heart;
+                animation-name: progressive-heart;
+            -webkit-animation-timing-function: ease-out;
+                animation-timing-function: ease-out;
+            -webkit-animation-duration: 0.3s;
+                animation-duration: 0.3s;
         }
     }
 
