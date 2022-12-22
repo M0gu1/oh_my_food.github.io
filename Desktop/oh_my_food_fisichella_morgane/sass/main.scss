@@ -172,7 +172,7 @@ body {
         max-height: 18px;
         position: absolute;
         opacity: 0;
-        &:hover {
+        &:active, &:hover {
             cursor: pointer;
             opacity: 1;
             max-width: 18px;
@@ -254,7 +254,7 @@ body {
     .heart-homepage {
         max-width: 18px;
         max-height: 18px;
-        &:hover {
+        &:active, &:hover {
             cursor: pointer;
         }
     }
@@ -375,7 +375,7 @@ header {
         width: 27px;
         max-width: 27px;
         max-height: 27px;
-        &:hover {
+        &:active, &:hover {
             cursor: pointer;
         }
     }
@@ -386,7 +386,7 @@ header {
         max-height: 27px;
         position: absolute;
         opacity: 0;
-        &:hover {
+        &:active, &:hover {
             cursor: pointer;
             opacity: 1;
             max-width: 27px;
@@ -1072,6 +1072,27 @@ $loader-color: #FDD835;
         width: 10%;
     }
 
+    .linear-heart-homepage {
+        &:hover {
+            cursor: pointer;
+            opacity: 1;
+            max-width: 18px;
+            max-height: 18px;
+            -webkit-animation-name: progressive-heart;
+                animation-name: progressive-heart;
+            -webkit-animation-timing-function: ease-out;
+                animation-timing-function: ease-out;
+            -webkit-animation-duration: 0.3s;
+                animation-duration: 0.3s;
+        }
+    }
+
+    .heart-homepage {
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
     /* FOOTER */ 
     .footer-box {
         padding-left: 5px;
@@ -1099,6 +1120,27 @@ $loader-color: #FDD835;
         margin-bottom: 18px;
         width: 96%;
         justify-content: center;
+    }
+
+    .heart-menu {
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    .linear-heart-menu {
+        &:hover {
+            cursor: pointer;
+            opacity: 1;
+            max-width: 27px;
+            max-height: 27px;
+            -webkit-animation-name: progressive-heart;
+                animation-name: progressive-heart;
+            -webkit-animation-timing-function: ease-out;
+                animation-timing-function: ease-out;
+            -webkit-animation-duration: 0.3s;
+                animation-duration: 0.3s;
+        }
     }
 
     .menu-container {
